@@ -1,0 +1,310 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  16 NOV 2015 12:26
+entering extended mode
+**main.tex
+
+("D:\Eigene Dokumente\Uni\TU\Auslandssemester\Network Information Technology Se
+curity\project\report\mondaysecpaper\niklas\main.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(D:\Programme\Latex\Miktex\tex\latex\ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(D:\Programme\Latex\Miktex\tex\latex\psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (D:\Programme\Latex\Miktex\tex\latex\blindtext\blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(D:\Programme\Latex\Miktex\tex\latex\tools\xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count94
+\c@Blindtext=\count95
+\c@blind@countparstart=\count96
+\blind@countxx=\count97
+\blindtext@numBlindtext=\count98
+\blind@countyy=\count99
+\c@blindlist=\count100
+\c@blindlistlevel=\count101
+\c@blindlist@level=\count102
+\blind@listitem=\count103
+\c@blind@listcount=\count104
+\c@blind@levelcount=\count105
+\blind@mathformula=\count106
+\blind@Mathformula=\count107
+\c@blind@randomcount=\count108
+\c@blind@randommax=\count109
+\c@blind@pangramcount=\count110
+\c@blind@pangrammax=\count111
+)
+(D:\Programme\Latex\Miktex\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\Programme\Latex\Miktex\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(D:\Programme\Latex\Miktex\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\Programme\Latex\Miktex\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(D:\Programme\Latex\Miktex\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(D:\Programme\Latex\Miktex\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(D:\Programme\Latex\Miktex\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(D:\Programme\Latex\Miktex\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count112
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+(D:\Programme\Latex\Miktex\tex\latex\url\url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("D:\Eigene Dokumente\Uni\TU\Auslandssemester\Network Information Technology Se
+curity\project\report\mondaysecpaper\niklas\main.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+
+-- Lines per column: 56 (exact).
+(D:\Programme\Latex\Miktex\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count113
+\scratchdimen=\dimen128
+\scratchbox=\box28
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen129
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks17
+) [1{C:/Users/Marovelo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 530.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 530.
+
+<./img/hpStudy1.png, id=9, 554.82281pt x 377.15906pt>
+File: ./img/hpStudy1.png Graphic file (type png)
+ <use ./img/hpStudy1.png>
+Package pdftex.def Info: ./img/hpStudy1.png used on input line 577.
+(pdftex.def)             Requested size: 252.94499pt x 171.94717pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 577--578
+ [][] 
+ []
+
+<./img/owaspTop10.png, id=11, 364.20276pt x 429.81631pt>
+File: ./img/owaspTop10.png Graphic file (type png)
+
+<use ./img/owaspTop10.png>
+Package pdftex.def Info: ./img/owaspTop10.png used on input line 607.
+(pdftex.def)             Requested size: 216.81pt x 255.87833pt.
+ [2 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology
+ Security/project/report/mondaysecpaper/niklas/img/hpStudy1.png>]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¤ in font ptmr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 869.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 869.
+
+Underfull \hbox (badness 10000) in paragraph at lines 873--877
+$\OT1/ptm/m/n/8 Internet[]of[]Things[]Top[]Ten[]Project # tab = OWASP[]Internet
+[]of[]Things[]$
+ []
+
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no € in font ptmri7t!
+Missing character: There is no ” in font ptmri7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+[]\OT1/ptm/m/n/8 arstechnica, \OT1/ptm/m/it/8 The fu-ture is the In-ter-net of 
+Things-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+\OT1/ptm/m/it/8 deal with it\OT1/ptm/m/n/8 ,  $http : / / arstechnica . com / u
+nite / 2015 / 10 /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--899
+$\OT1/ptm/m/n/8 the-[]future-[]is-[]the-[]internet-[]of-[]things-[]deal-[]with-
+[]it/$, last ac-cess: 2015-
+ []
+
+** WARNING: \IEEEbiography is locked out when in conference mode (line 913).
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[3 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology 
+Security/project/report/mondaysecpaper/niklas/img/owaspTop10.png>]
+("D:\Eigene Dokumente\Uni\TU\Auslandssemester\Network Information Technology Se
+curity\project\report\mondaysecpaper\niklas\main.aux") ) 
+Here is how much of TeX's memory you used:
+ 2228 strings out of 493921
+ 36255 string characters out of 3148076
+ 97511 words of memory out of 3000000
+ 5536 multiletter control sequences out of 15000+200000
+ 35966 words of font info for 69 fonts, out of 3000000 for 9000
+ 844 hyphenation exceptions out of 8191
+ 27i,7n,19p,232b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/Latex/Mik
+tex/fonts/enc/dvips/fontname/8r.enc}<D:/Programme/Latex/Miktex/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><D:/Programme/Latex/Miktex/fonts/type1/urw/times/utmb8
+a.pfb><D:/Programme/Latex/Miktex/fonts/type1/urw/times/utmbi8a.pfb><D:/Programm
+e/Latex/Miktex/fonts/type1/urw/times/utmr8a.pfb><D:/Programme/Latex/Miktex/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (3 pages, 282960 bytes).
+PDF statistics:
+ 38 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
