@@ -401,7 +401,18 @@ Email: Niklas.Lensing@gmail.com}}
 
 \begin{abstract}
 %\boldmath
-\blindtext[1]
+This paper deals with security in the Internet of Things (IoT). 
+
+In a brief introduction it will be elaborated about what the IoT is. 
+Subsequently it will be explained why security in the IoT is important with the 
+help of some examples. 
+
+The main focus of this paper is the analysis of the current status of security. 
+Findings from different organizations are being discussed and then evaluated.
+
+Finally some thoughts about improving the current security situation are 
+expressed.
+
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -411,9 +422,9 @@ Email: Niklas.Lensing@gmail.com}}
 % in the abstract anyway.
 
 % Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%IEEEtran, journal, \LaTeX, paper, template.
-%\end{IEEEkeywords}
+\begin{IEEEkeywords}
+Internet of Things, IoT, security, security threats.
+\end{IEEEkeywords}
 
 
 
@@ -433,21 +444,40 @@ Email: Niklas.Lensing@gmail.com}}
 
 
 \section{Introduction}
-\blindtext
-%What is the Internet of Things?
+The Internet of things (IoT) is a trending topic. Some say that the IoT will 
+shape our future lives. But what exactly is this Internet of Things?
 
-%“The Internet of Things is the network of physical objects or ‘things’ 
-%embedded with electronics, software, sensors, and network connectivity, which 
-%enables these objects to collect and exchange data.” – International 
-%Telecommunication Union (ITU)/Wikipedia, 2014
-%
-%“A proposed development of the Internet in which everyday objects have network 
-%connectivity, allowing them to send and receive data.” – Oxford University, 
-%2014
-%
-%no fixed definition
-%
-%big Buzzword with different stakeholders
+The International Telecommunication Union (ITU) states that: ''The Internet of 
+Things is the network of physical objects or 'things' embedded with  
+electronics, software, sensors, and network connectivity, which 
+enables these objects to collect and exchange data.'' \cite{ituPage}
+
+The Oxford University published a definition seeing the IoT as ''a 
+proposed development of the Internet in which everyday objects have network 
+connectivity, allowing them to send and receive data.'' \cite{HPstudy}
+
+Furthermore HP observes that ''suddenly, everything from refrigerators to 
+sprinkler systems are wired and interconnected (...). These devices are now 
+collectively called the Internet of Things (IoT).'' \cite{HPstudy}
+
+As one can see from these three citations there is no fixed definition of what 
+the Internet of Things is. Bringing the key points together one can learn that 
+they all stress the idea of devices being connected to the Internet to exchange 
+information. This is a quite spacious definition allowing lots of devices to 
+count themselves into the range of IoT devices.
+
+Another point that can be observed is the diversity of the entities being 
+involved into the IoT. These three quotes are from an international 
+standardization organization, a famous university and a big IT company. So it 
+can be concluded that there are different stakeholders being involved into the 
+IoT. It is a topic which affects several areas and therefore attracts so many 
+different entities.
+
+Due to the growing importance of IoT and it's seemingly endless possibilities 
+it naturally also attracts the attention of hackers. As a consequence one might 
+ask: What is done about security in the IoT? Do we actually need it all? These 
+are the questions that this paper will focus on.
+
 
 \section{Why is security in the IoT important?}
 Not securing your IoT devices properly can have serious consequences. Hacked 
@@ -467,7 +497,7 @@ features a modem which connects the car to the Internet. With the help of this
 modem hackers were able to hack over the Internet into UConnect which in turn 
 had access to the car's central CAN bus system. This CAN bus can be found in a 
 lot of modern cars and it is used to distribute information between the car's 
-electronical devices. With access to the CAN bus the hackers were able to send 
+electronic devices. With access to the CAN bus the hackers were able to send 
 instructions to the car's brakes, the gas and in reverse gear even to the 
 wheel. \cite{ctArticle}
 
@@ -475,12 +505,12 @@ One might ask how it is possible that the infotainment system was entitled to
 do so? Why was there no protection against such non authorized commands?
 
 First of all it has to be stated that connecting the infotainment system to 
-other electronical devices in a car is very useful. For instance the 
+other electronic devices in a car is very useful. For instance the 
 infotainment system of the Jeep Cherokee adjusts the volume of the music 
 according to the speed of the car and to do so it needs to be connected to the 
 CAN bus. However the CAN bus was not designed to be secure against hacker 
 attacks. When the CAN bus was designed it was a closed system and attacks from 
-outside were not an issue. It was not forseeable that cars would get connected 
+outside were not an issue. It was not foreseeable that cars would get connected 
 to the Internet.
 
 This example shows one of the major problems of IoT devices. A lot of the 
@@ -492,14 +522,14 @@ secure, it is very hard to implement security afterwards.
 IoT devices help us in our everyday life. To do so, several of these 
 devices have access to very sensitive personal data. 
 
-One example is the Apple Watch which gathers several sensitve information. The 
+One example is the Apple Watch which gathers several sensitive information. The 
 watch has an integrated heart beat scanner so it holds information about the 
 user's health condition. What is more it can be used with Apple's payment 
 system Apple Pay and therefore has access to banking information. With the help 
 of an IPhone it can also obtain the current GPS position. 
 
 To sum it up an Apple Watch is able to hold information about one's health 
-condition, banking information and location data. All of these are data which 
+condition, banking and location data. All of these are data which 
 surely a lot of people would like to be kept secret. And to keep these data 
 secret proper security is necessary.
 
@@ -517,8 +547,13 @@ devices should be secured properly.
 
 \section{Current status of security in IoT}
 Regarding the arguments and examples from the previous section, security should 
-be handled seriously in the IoT. However, a study on security in IoT devices 
-and the unsolved issue how to patch IoT devices show a different image.
+be handled seriously in the IoT. In this section the current status of security 
+in IoT will be elaborated. 
+
+To get an overview about the current status a study on security in IoT devices 
+and the OWASP Top 10 list will be evaluated. 
+
+What is more it is discussed how IoT devices are being patched.
 
 \subsection{IoT security study}
 A current study (\cite{HPstudy}) conducted by Hewlett Packard (HP) evaluated on 
@@ -528,11 +563,11 @@ devices were:
 
 \begin{itemize}
 \item TV
-\item webcam
+\item web cam
 \item home thermostat
 \item remote power outlet
 \item sprinkler controller
-\item hub for controlling muliple devices
+\item hub for controlling multiple devices
 \item door lock
 \item home alarm
 \item scale
@@ -541,7 +576,7 @@ devices were:
 
 Some of these devices have access to sensitive information about the user. The 
 TV for example could tell a hacker which programs the user likes to watch. 
-Spying on a webcam might gives hackers a very intimate insight into the user's 
+Spying on a web cam might gives hackers a very intimate insight into the user's 
 life.
 
 Others of these devices are a lucrative target to be manipulated by an 
@@ -594,13 +629,13 @@ much work to be fixed. So it seems there is either a lack of time or will to
 handle security in at least some IoT business areas.
 
 \subsection{OWASP Top 10}
-the Open Web Application Security Project (OWASP) is a foundation which tries 
-to enforce security thoughout the internet. To do so it runs several projects 
-which aim to estabhlish a safer Internet. 
+The Open Web Application Security Project (OWASP) is a foundation which tries 
+to enforce security throughout the Internet. To do so, it runs several projects 
+which aim to establish a safer Internet. 
 
 Among these projects OWASP publishes a list of the top 10 security flaws in the 
-iot. it lists the most common errors done about security ordered by their 
-frequency of occurence. The list can be seen in figure. 
+IoT. It lists the most common mistakes done about security ordered by their 
+frequency of occurrence. The list can be seen in figure \ref{owaspTop10}. 
 
 \begin{figure}[!t]
 \centering
@@ -609,51 +644,85 @@ frequency of occurence. The list can be seen in figure.
 \label{owaspTop10}
 \end{figure}
 
-with this list OWASP wnats to give developers a guideline which security issues 
-are common and how they should be handled. To every of the top 10 security 
-flaws a detailed page can be found which gives further information on how to 
-take counter measures against the threat. developers who are unfamiliar with 
+With this list OWASP wants to give developers an overview about which security 
+issues are common and how they should be handled. To every of the 10 security 
+flaws exists a detailed page which gives further information on how to take 
+counter measures against the threat. Developers who are unfamiliar with  
 security topics are supposed to use this page as an information source to 
-secure software properly.
+secure their software properly.
 
-Point 1, 4 and 8 on the top 10 list were also mentioned in the study which 
-was discussed in the previous section: Similar to the points of the top 10 list 
-this study found that many of the devices tested had an insecure web interface, 
-did not encrypt their network traffic and insufficient security configurability 
-which means amongst other things that a sufficient password policy is missing. 
-so as these points are also mentioned in this top 10 list is another indicator 
-that results of the study are accurate.
+Point 1, 4 and 8 on the Top 10 list were also mentioned in the study which 
+was discussed in the previous section: Similar to the points on the Top 10 list 
+the HP study found out that many of the devices tested had an insecure web 
+interface, did not encrypt their network traffic and featured insufficient 
+security configurability which means amongst other things that a sufficient 
+password policy is missing. That these points are also mentioned in this Top 
+10 list is another indicator that the results of the study are accurate.
 
-insufficient authentication/authorization -> ct S.90, Abschnitt Typische Fehler 
-vermeiden
+According to the top 10 list insufficient authentication/authorization is a 
+common security flaw in IoT devices. This flaw comprises bad or non existing 
+password encryption and the lack of user roles. 
 
-insecure network services -> unsichere network services with security flaws -> 
-ct S.90, Abschnitt Typische Fehler vermeiden
+Passwords should always be encrypted. This includes both, when they are saved 
+in a database as well as when they are sent over the network. If this is not 
+done a hacker could easily extract the password from network traffic or try to 
+steal the database and get the password from there without any effort. 
 
-privacy concerns? -> ct S.90, Abschnitt Typische Fehler vermeiden
+User roles are essential to a securely working environment. Not all user 
+accounts for a system should have the same rights. There should be a 
+distinction between different roles. Otherwise every user could change 
+passwords or delete users which facilitates the work for attackers.
 
-punkt 9/10 -> ct S.90, Abschnitt Typische Fehler vermeiden
+The third point on the list, insecure network services, is referring to open 
+ports on network devices which could be closed as they are not needed. Hackers 
+often look for well known ports which are known to offer insecure network 
+services. To minimize the risk of being attacked all ports which are not 
+absolutely necessary for proper operation should be closed.
 
-analyzing this list; kommentar zu der liste, einfache oben, schwere unten -> 
-underlines not a lot of 
-care is taken about security in iot
+Another point mentioned on the list are privacy concerns. When collecting user 
+data it should be carefully determined which information are absolutely 
+necessary to be stored. User data which is not needed should be discarded to 
+make a theft have less impact on the user's privacy. In addition to that it 
+should also be clearly determined who is allowed access to sensitive user data. 
+Only persons who really need access to the data should get it.
 
-erwähnen in Einleitung
+Point 9 and 10 on the Top 10 list are topics which demand a rather high effort 
+to be met.
+
+Insecure software/firmware refers to security holes in software. OWASP states 
+that there should be a mechanism to update software on IoT devices. As the 
+devices are exposed to the Internet hackers will eventually find security holes 
+in the software and exploit these holes. Hence there has to be a mechanism to 
+fix them.
+
+The last point on the list, poor physical security, states that the devices 
+should be stored in a secured place where attackers cannot easily get access 
+to. This minimizes the risk of direct physical intervention on the device by an 
+attacker.
+
+Analysing the points on the Top 10 list, one can see that the upper points on 
+the list are simple security flaws which can be met with rather little effort. 
+The more complex and expensive security issues such as an update mechanism or 
+ensuring physical security are the last points on the list. Taking into account 
+that the points are ordered by their frequency of occurrence it can be 
+concluded that not a lot of effort is put into ensuring security in IoT. This 
+reflects the findings of the HP study mentioned above which also stated similar 
+facts.
 
 
 \subsection{Patching problems}
-Security updates are an important means to fix security holes that were 
-not known when a software got released. For software which has been exposed to 
-the web for a longer time such as operating systems and browsers it is common 
-pratice to release security patches at least once a month. These patches are 
-then distributed over the Internet.
+Security updates are an important means to fix holes that were not known when a 
+software got released. For software which has been exposed to the web for a 
+longer time such as operating systems and browsers it is common practice to 
+release security patches at least once a month. These patches are then 
+distributed over the Internet.
 
 The software update process in IoT is still an unsolved problem in a lot of 
 cases. The problem in IoT is that a lot of the devices where the software runs 
 on are difficult to update or were not initially designed to get software 
 updates. 
 
-One exmaple are cars. For software updates cars normally need to be send back 
+One example are cars. For software updates cars normally need to be send back 
 to the car manufacturer as only he has the know how to perform software 
 updates. However, implementing the practice of sending the car back to the car 
 manufacturer every month for security updates is for obvious reasons not 
@@ -669,8 +738,8 @@ years old. But the technology for monitoring has a much faster upgrade cycle.
 How do you build an architecture for things like that that's enabled for  
 upgradability?'' 
 
-These untackled patching problems remain unsolved in many business areas of the 
-IoT. 
+These unsolved patching problems are still unsolved in many business areas of 
+the IoT. 
 
 
 % needed in second column of first page if using \IEEEpubid
@@ -761,44 +830,44 @@ IoT.
 
 
 \section{Conclusion}
-\blindtext
+It can be stated that currently there is a lack of experience and/or will to 
+deal with security properly. Developers seem to invest their time rather into 
+new features than into security. This is reflected by the results of the HP 
+study and the OWASP Top 10 list. Also the unsolved problem of developing an 
+update mechanism shows that there is little motivation to deal with security 
+related topics.
 
-%IoT is great and will be the future - point is not to destroy IoT. Just please 
-%consider security as this might lead to serious problems.
+No matter where this lack of motivation comes from - no experience or no will - 
+security in IoT should and can be dealt with.
 
-%it can be stated that currently there is a lack of expierence and will to deal 
-%with security properly. it seems developers tend to invest more time in new 
-%features than into security. this shown by the HP study and the unwilligness 
-%of 
-%the manufaturers to deal with the unsolved patching problem
-%why is it like that?
-%no experience? no will? it seems there is a lack of expierence on security 
-%issues among IoT developers. because these are beginners faults
-% either no know how or no will/time.
+Assuming that there is a lack of experience there are means to get information 
+such as the OWASP Top 10 list which gives a good introduction into the topic. 
+Developers could use the information from this project to secure their IoT 
+devices against the most common threats with little effort.
 
-% if it is lack of experience: there are means to get information -> OWASP
+Developers might argue that right now they do not want to deal with security 
+and rather prefer to focus on implementing new features. Security could be 
+dealt with later. However this way of thinking has proven to be wrong: The 
+problems with the CAN bus in the Jeep Cherokee show that implementing security 
+after the design can be difficult or even impossible.
 
-% if it is lack of will: security should be done now - include it in the design 
-%-> later implementation 
-%very complicated and normally costs a lot or is even infeasible
-%it's cheaper to implement security now - one might think it's easier to think 
-%about security later -> has proven to be false, see also Jeep Cherokee 
-%example. 
+As a result security has to be considered in the design of IoT devices. 
+Implementing security later is complicated and costs a lot more or is even 
+infeasible. It is cheaper - time and money wise - to implement security now. 
 
-%IoT bears a lot of opportunities but security should be considered
-%
-%developers of IoT lack expierence in security
-%
-%security should be considered when designing IoT devices
-%
-%What do we want to interconnect/connect to the Internet?
+One might also ask if really all these ''things'' being connected to the 
+Internet right now, do need this connection. Does for instance an iron need an 
+Internet connection? There are some which do have one. Perhaps part of the 
+solution for the IoT security issues is quite simple: Just do not connect some 
+''things'' to the Internet at all. A proper thought about the benefits of 
+connecting a device to the Internet might help to reduce security issues.
 
-
-%aus ct: 
-%	S.80, Abschnitt Neuland ff.
-%		alles wird ins Internet gesetzt -> ist das wirklich gut?
-%		es braucht ein Umdenken der gesamten Branche			
-%still a lot of work, research
+The aim of this paper is not to condemn the IoT or to make it look as a bad 
+idea. This paper just wants to emphasize that security should be considered 
+more carefully in the design of IoT devices. The IoT bears a lot of fascinating 
+opportunities but while exploring these, security issues should be considered 
+and included into the design. Ignoring security threats can lead to severe 
+problems as this paper pointed out.
 
 
 % if have a single appendix:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  16 NOV 2015 12:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  16 NOV 2015 20:04
 entering extended mode
 **main.tex
 
@@ -212,41 +212,52 @@ LaTeX Font Info:    ... okay on input line 352.
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks17
-) [1{C:/Users/Marovelo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+)
+Underfull \hbox (badness 1371) in paragraph at lines 425--427
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Internet of Things, IoT, se-cu-r
+ity, se-cu-rity
+ []
+
+[1{C:/Users/Marovelo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 530.
+(Font)              <7> on input line 565.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 530.
+(Font)              <5> on input line 565.
 
 <./img/hpStudy1.png, id=9, 554.82281pt x 377.15906pt>
 File: ./img/hpStudy1.png Graphic file (type png)
  <use ./img/hpStudy1.png>
-Package pdftex.def Info: ./img/hpStudy1.png used on input line 577.
+Package pdftex.def Info: ./img/hpStudy1.png used on input line 612.
 (pdftex.def)             Requested size: 252.94499pt x 171.94717pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 577--578
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 612--613
  [][] 
  []
 
-<./img/owaspTop10.png, id=11, 364.20276pt x 429.81631pt>
+[2 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology 
+Security/project/report/mondaysecpaper/niklas/img/hpStudy1.png>]
+<./img/owaspTop10.png, id=16, 364.20276pt x 429.81631pt>
 File: ./img/owaspTop10.png Graphic file (type png)
 
 <use ./img/owaspTop10.png>
-Package pdftex.def Info: ./img/owaspTop10.png used on input line 607.
+Package pdftex.def Info: ./img/owaspTop10.png used on input line 642.
 (pdftex.def)             Requested size: 216.81pt x 255.87833pt.
- [2 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology
- Security/project/report/mondaysecpaper/niklas/img/hpStudy1.png>]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 869.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 869.
 
-Underfull \hbox (badness 10000) in paragraph at lines 873--877
+Underfull \hbox (badness 2591) in paragraph at lines 662--665
+[]\OT1/ptm/m/n/10 According to the top 10 list in-suf-fi-cient au-then-ti-ca-
+ []
+
+[3 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology 
+Security/project/report/mondaysecpaper/niklas/img/owaspTop10.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 938.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 938.
+
+Underfull \hbox (badness 10000) in paragraph at lines 942--946
 $\OT1/ptm/m/n/8 Internet[]of[]Things[]Top[]Ten[]Project # tab = OWASP[]Internet
 []of[]Things[]$
  []
@@ -255,24 +266,24 @@ Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ” in font ptmri7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--899
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
 []\OT1/ptm/m/n/8 arstechnica, \OT1/ptm/m/it/8 The fu-ture is the In-ter-net of 
 Things-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--899
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
 \OT1/ptm/m/it/8 deal with it\OT1/ptm/m/n/8 ,  $http : / / arstechnica . com / u
 nite / 2015 / 10 /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--899
+Underfull \hbox (badness 10000) in paragraph at lines 964--968
 $\OT1/ptm/m/n/8 the-[]future-[]is-[]the-[]internet-[]of-[]things-[]deal-[]with-
 []it/$, last ac-cess: 2015-
  []
 
-** WARNING: \IEEEbiography is locked out when in conference mode (line 913).
+** WARNING: \IEEEbiography is locked out when in conference mode (line 982).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -284,8 +295,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology 
-Security/project/report/mondaysecpaper/niklas/img/owaspTop10.png>]
+[4]
 ("D:\Eigene Dokumente\Uni\TU\Auslandssemester\Network Information Technology Se
 curity\project\report\mondaysecpaper\niklas\main.aux") ) 
 Here is how much of TeX's memory you used:
@@ -302,9 +312,9 @@ ic/amsfonts/cm/cmsy7.pfb><D:/Programme/Latex/Miktex/fonts/type1/urw/times/utmb8
 a.pfb><D:/Programme/Latex/Miktex/fonts/type1/urw/times/utmbi8a.pfb><D:/Programm
 e/Latex/Miktex/fonts/type1/urw/times/utmr8a.pfb><D:/Programme/Latex/Miktex/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 282960 bytes).
+Output written on main.pdf (4 pages, 287969 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
