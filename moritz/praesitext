@@ -1,0 +1,59 @@
+
+- LE = Smart 4.0/2009
+- Simplified version of BT Classic.
+- already used in a lot of
+- really great for low energy
+
+- though today not our topic but instead security.
+- BLE as of BT Standard Version 4.0 is completely broken and I will show you why.
+- But first let me tell you something about the protocol stack: (if you have questions during the presentation, please ask me and I will try to respond them immedeately)
+
+Stack-slide
+PHY Layer:
+- simple modulation (1Mbit/s)
+- 40 Channels in 2.4 GHz
+- Hopping
+
+
+Channel-slide
+(explain why 37 channels)
+Hopping slide
+- hopping interval
+- hopping increment
+- prime thing
+- connection packet
+
+
+About encryption:
+- Uses AES-CCM
+- Key exchange protocol: (images)!!
+  - TK generation ( AES Key )
+    - Just works: 0
+    - 6-digit PIN: 000000-999999
+    - OOB: 128-bit key
+    - From this AES generate a confirm
+      - confirm = AES(TK, AES(TK, rand XOR p1) XOR p2)
+  - STK generation/negotiation
+    - using TK
+    - used for Link-Layer encryption
+  - LTK generation
+    - generated on link-layer encrypted session
+    - long term key (for future sessions as well)
+    - used to create session keys in future
+- attack:
+  - connection packet -> follow hopping
+    - force connection reset
+  - bruteforce 6-digit PIN, or "Just works"
+  - compare to "confirm"
+  - decrypt STK
+  - decrypt LTK
+  - done (session keys)
+  - Passive (no-one knows)
+- Diffie Hellman (eliptic curves) to the rescue:
+  -
+- GATT
+  - after connection some key exchange on application layer. based on asynchronous encryption
+- Bluetooth 4.2 (December 2014)
+  - won't be applied to already (most of) existing devices
+  - still not all bluetooth hardware uses
+  - includes LE Secure Connections uses an algorithm called Elliptic curve Diffie–Hellman (ECDH) for key generation, and a new pairing procedure for the key exchange.

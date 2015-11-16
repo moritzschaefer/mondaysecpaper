@@ -1,0 +1,68 @@
+\documentclass[a4paper]{scrartcl}
+% Source: http://www.howtotex.com/templates/two-column-journal-article-template/
+
+% SETTINGS BEGIN
+
+% \usepackage{assignment} \usepackage[hmarginratio=1:1,top=25mm,left=25mm]{geometry}
+%\usepackage{arydshln}
+
+
+\usepackage{amsmath}
+\usepackage{wasysym}
+
+%\usepackage{ stmaryrd }
+\usepackage{tikz}
+\usetikzlibrary{fit,shapes,arrows}
+
+\newcommand{\impldef}[1]{\stackrel{\mathrm{#1}}\Rightarrow}
+\newcommand{\biimpldef}[1]{\stackrel{\mathrm{#1}}\Leftrightarrow}
+\newcommand{\ldot}{\;.\;}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Ps}{\mathcal{P}}
+
+\renewcommand{\labelitemi}{$-$}
+
+
+
+
+
+
+\begin{document}
+\title{Bluetooth Low Energy {\textendash} Security issues}
+\author{Moritz Schaefer}
+\date{2015/11/07}
+
+\maketitle
+
+\section{Introduction}
+While the \emph{Internet of Things} gets more and more popular, security gets a bigger and bigger concern at the same time in that topic. Many devices connected to the internet use unsafe technologies and are easily hackable over the Internet. [...]. \emph{Bluetooth Low Energy}, or officially \emph{Bluetooth Smart} (in the rest of the document BLE) is a quite recent technology that came up in 2010[reference, announcement of BLE] and got a lot of attention in the meanwhile. It's powersaving capabilities allow certain devices to run with a single coin cell battery for more than a year[reference]. This is a game changer and enables many new applications in the Internet of Things. Even though BLE is a modern technology, in it's original specification version 4.0 the security is broken for very trivial reasons. Fortunately 5 years after this, the Bluetooth commitee[?] improved their standard with the version number 4.2 and included a fix for the security hole. In this paper I will show you different attacks on BLE, along with tools on how to use the attacks in practice; and give suggestions on how to fix the security issues and explain how the new standard version solves the security hole.
+
+\section{Wireless Technology}
+
+BLE is a standard defined from the Bluetooth Standard Version 4.0 on. It coexists with the Bluetooth Classic specification. While there are similarities, Bluetooth Low Energy is derived from Bluetooth Classic, the two standards are not compatible. A device has to implement both standards to be able to communicate with devices of both kinds.
+Talk about how many devices there are (9 billion)
+%\imglayers
+While BLE has the same top-level layers as Bluetooth Classic, namely [...] Application/GATT Layer, ..,.., it has differences on the low level layers.
+
+\subsection{Physical layer}
+
+BLE operates in the same 2.4 GHz frequency band as Bluetooth classic. Though it uses only 40 instead of 80 channels where each channel has 2 MHz space. 37 of these channels are used for data transmission and 3 channels are advertisment channels. Devices advertise their services and the ability to connect to them on these three channels; Connection establishment is also performed on these channels. Different from Bluetooth Classic, BLE uses the Gaussian Frequency Shift Keying (GFSK) modulation scheme[...].
+
+\subsubsection{Channel hopping}
+
+To prevent interference with other connections and wireless technologies, BLE uses frequency hopping and changes the channel after a defined amount of time. The channels are switched according to the formulae
+
+\begin{align*}
+  %\label{eq:}
+  newchannel = currentchannel+hopincrement%37
+\end{align*}
+
+where advertisment channels are not considerated for simplification. The channel is changed in a defined interval hoptime, i.e. every \emph{hoptime} milliseconds, the channel is hopped according to the given formulae.
+
+\subsection{Link layer}
+
+[figure: packet format]
+
+
+

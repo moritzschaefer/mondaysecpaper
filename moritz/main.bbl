@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{iotsecanalysis}
+G.~Gang, L.~Zeyong, and J.~Jun, ``Internet of things security analysis,'' in
+  {\em Internet Technology and Applications (iTAP), 2011 International
+  Conference on}, pp.~1--4, Aug 2011.
+
+\bibitem{blelowpower}
+M.~Siekkinen, M.~Hiienkari, J.~Nurminen, and J.~Nieminen, ``How low energy is
+  bluetooth low energy? comparative measurements with zigbee/802.15.4,'' in
+  {\em Wireless Communications and Networking Conference Workshops (WCNCW),
+  2012 IEEE}, pp.~232--237, April 2012.
+
+\bibitem{ble42}
+B.~{SIG}, ``Bluetooth 4.2 core specification,'' tech. rep., dec 2014.
+\newblock https://www.bluetooth.org/en-us/specification/adopted-specifications.
+
+\bibitem{ble42announcement}
+V.~Gao, ``{Everything You Always Wanted to Know About Bluetooth \- Security in
+  Bluetooth 4.2}.''
+  \url{http://blog.bluetooth.com/everything-you-always-wanted-to-know-about-bluetooth-security-in-bluetooth-4-2/},
+  2015.
+
+\bibitem{imgsrc:packetformat}
+L.~Li, ``{Using nRF24L01+ as A Bluetooth Low Energy Broadcaster/Beacon}.''
+  \url{http://ram.lijun.li/assets/files/wiki/img18_BLE_packet_structure.png},
+  2014.
+
+\bibitem{ble40}
+B.~{SIG}, ``Bluetooth 4.0 core specification,'' tech. rep., jun 2010.
+\newblock https://www.bluetooth.org/en-us/specification/adopted-specifications.
+
+\bibitem{ubertooth}
+M.~O. et~al., ``Ubertooth.''
+  \url{https://github.com/greatscottgadgets/ubertooth/}, 2010--2015.
+
+\bibitem{lowenergylowsecurity}
+M.~Ryan, ``Bluetooth: With low energy comes low security,'' in {\em Presented
+  as part of the 7th USENIX Workshop on Offensive Technologies}, (Berkeley,
+  CA), USENIX, 2013.
+
+\end{thebibliography}
