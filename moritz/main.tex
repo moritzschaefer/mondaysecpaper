@@ -402,7 +402,10 @@ Email: mollitz@gmail.com}}
 
 \begin{abstract}
 %\boldmath
-Bluetooth low energy is used in a lot of applications today. Though it's base implementation is broken by design. In this paper I will give an overview over Bluetooth low energy and its security mechanisms and then show how it can be attacked in different ways.
+Bluetooth low energy is used in a lot of applications today. However, it's base 
+implementation is broken by design. This paper gives an overview over Bluetooth 
+low energy and its security mechanisms. Furthermore it is shown how it can be 
+attacked in different ways.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -434,7 +437,26 @@ Bluetooth low energy is used in a lot of applications today. Though it's base im
 
 
 \section{Introduction}
-While the \emph{Internet of Things} gets more and more popular, security gets a bigger and bigger concern at the same time in that topic. Many devices connected to the internet use unsafe technologies and are easily hackable over the Internet. \cite{iotsecanalysis}. \emph{Bluetooth Low Energy}, or officially \emph{Bluetooth Smart} (in the rest of the document BLE) is a quite recent technology that came up in 2010 and got a lot of attention in the meanwhile. Its powersaving capabilities allow certain devices to run with a single coin cell battery for more than a year\cite{blelowpower}. This is a game changer and enables many new applications in the Internet of Things. Even though BLE is a modern technology, in its original specification version 4.0 the security is broken for very trivial reasons. Fortunately 5 years after this, the Bluetooth commitee improved their standard with the version number 4.2 and included a fix for the security hole\cite{ble42}\cite{ble42announcement}. In this paper I will show you different attacks on BLE, along with tools on how to use the attacks in practice; and give explain how the new standard version solves the security hole.
+While the \emph{Internet of Things} gets more and more popular, security's 
+importance is growing at the same time. Many devices connected to the internet 
+use insecure technologies and are easily hackable over the Internet. 
+\cite{iotsecanalysis} \emph{Bluetooth Low Energy}, or officially 
+\emph{Bluetooth Smart} (in the rest of the document BLE) is a quite recent 
+technology that came up in 2010 and got a lot of attention in the meanwhile. 
+Its powersaving capabilities allow certain devices to run with a single coin 
+cell battery for more than a year. \cite{blelowpower} This is a game changer 
+and 
+enables many new applications in the Internet of Things. Even though BLE is a 
+modern technology, in its original specification version 4.0 the security is 
+broken for very trivial reasons. Fortunately 5 years after this, the Bluetooth 
+commitee improved their standard with the version number 4.2 and included a fix 
+for the security hole. \cite{ble42},\cite{ble42announcement} 
+
+This paper shows
+different attacks on BLE, along with tools on how to use the attacks 
+in practice. It is also explained how the new standard version fixes the 
+security 
+hole.
 
 \section{Wireless Technology}
 
@@ -448,19 +470,28 @@ BLE is a standard first defined in the Bluetooth Specifications Version 4.0. It 
 \end{figure}
 
 
-While BLE has the same top-level layers as Bluetooth Classic(GATT and L2Capp layer), it has differences on the low level layers(physical and link layer).
+While BLE has the same top-level layers as Bluetooth Classic (GATT and L2Capp 
+layer), it has differences on the low level layers (physical and link layer).
 
 \subsection{Physical layer} \label{ssec:phy}
 
-BLE operates in the same 2.4 GHz frequency band as Bluetooth classic. Though it uses only 40 instead of 80 channels where each channel has 2 MHz space. 37 of these channels are used for data transmission and 3 channels are advertisment channels. Devices advertise their services and the ability to connect to them on these three channels; Connection establishment is also performed on these channels. Different from Bluetooth Classic, BLE uses the Gaussian Frequency Shift Keying (GFSK) modulation scheme.
+BLE operates in the same 2.4 GHz frequency band as Bluetooth classic. Though it 
+uses only 40 instead of 80 channels where each channel has 2 MHz space. 37 of 
+these channels are used for data transmission and 3 channels are for 
+advertisement. Devices advertise their services and the ability to connect to 
+them on these three channels; connection establishment is also performed on 
+these channels. Different from Bluetooth Classic, BLE uses the Gaussian 
+Frequency Shift Keying (GFSK) modulation scheme.
 
 \subsubsection{Channel hopping}
 
-To prevent interference with other connections and wireless technologies, BLE uses frequency hopping and changes the channel after a defined amount of time. The channels are switched according to the formulae
+To prevent interference with other connections and wireless technologies, BLE 
+uses frequency hopping and changes the channel after a defined amount of time. 
+The channels are switched according to the following formulae:
 
 \begin{align*}
   %\label{eq:}
-  newchannel = currentchannel+hopincrement\%37
+  newchannel = currentchannel+hopincrement \% 37
 \end{align*}
 
 where advertisment channels are not considerated for simplification. The channel is changed in a defined interval hoptime, i.e.\ every "\emph{hoptime}" milliseconds, the channel is hopped according to the given formulae.
@@ -474,25 +505,55 @@ where advertisment channels are not considerated for simplification. The channel
   \label{fig:packetformat}
 \end{figure}
 
-BLE packet are made of the components shown in figure~\ref{fig:packetformat} and consist of between ten and 47 bytes. The first 8 bit are a fixed preamble to indictae the packet is a BLE packet. The next 32 bit are the access address. For advertising packets, this field always has the value 0x8E89BED6 for normal data packets it is a connection specific value. The next field is the PDU(Protocol data unit) which contains the actual payload/user data and consists of 2-39 bytes dependent on the application layer packet size. In the end end there is simple CRC value which functions as a checksum to verify the integrity of the package content.
+BLE packets are made of the components shown in figure~\ref{fig:packetformat} 
+and consist of between 10 and 47 bytes. The first 8 bit are a fixed preamble 
+to indictae the packet is a BLE packet. The next 32 bit are the access address. 
+For advertising packets, this field always has the value ''0x8E89BED6'', for 
+normal 
+data packets it is a connection specific value. 
+
+The next field is the 
+PDU (Protocol data unit) which contains the actual payload/user data and 
+consists of 2-39 bytes dependent on the application layer packet size. In the 
+end there is a simple CRC value which functions as a checksum to verify the 
+integrity of the package content.
 In Bluetooth low energy to keep power consumption low, many mechanisms are less aggressive than on Bluetooth classic. Specificially the hopping rate and the whitening of PDU are simpler and as a result of that as well simpler to eavesdrop.
 
 \subsection{Connection} \label{ssec:con}
 
 As the bluetooth peripheral device sends advertisment packages, the central device, which is often represented by a smartphone-similar device is responsible of detecting and connecting to it. During this connection establishment the two devices setup the connection which includes parameters like \emph{channel hop time} and \emph{channel increment}, but also initialize the encryption, if enabled. After the connection is established, the two devices talk on 37 channels with channel hopping enabled.
 
-It is worth mentioning, that all PDU and CRC data is whitened (by XORing) with a LFSR. Though, as the seed is simply the channel number, it doesn't increase security/anonymity as it can easily be reversed in an eavesdropping process.
+It is worth mentioning, that all PDU and CRC data is whitened (by XORing) with 
+a LFSR. Though, as the seed is simply the channel number, it doesn't increase 
+security/anonymity as it can easily be reversed in an eavesdropping process.
+
+%KOMMENTAR: Wofür steht LFSR? Eine ausgeschriebene Eräuterung wäre hier 
+%hilfreich.
 
 \section{Encryption}
 
-BLE uses AES-CCM for it's encryption. This standard ensures data encryption and integrity at the same time. It is used in many applications as for example WLan and is considered to be unbroken. While this is a public and secure standard, there is nothing to worry about and analyzing this is not in the scope of the paper. Though, the key exchange protocol used by BLE is another story. The key exchange protocol was invented exclusively by the Bluetooth association and is broken by design.
+BLE uses AES-CCM for it's encryption. This standard ensures data encryption and 
+integrity at the same time. It is used in many applications as for example WLAN 
+and is considered to be unbroken. It is a public and secure standard - 
+analyzing it is beyond the scope of this paper. Though, the key exchange 
+protocol used by BLE is another story. The key 
+exchange protocol was invented exclusively by the Bluetooth association and is 
+broken by design.
+
+%KOMMENTAR: Wofür steht AES-CCM? Eine ausgeschriebene Eräuterung wäre hier 
+%hilfreich.
 
 \subsection{Key exchange}
 \label{sub:key_exchange}
 
 As mentioned in section~\ref{ssec:con}, encryption starts during connection by exchanging the keys. This is the basis of the encryption and all subsequent keys are based on this first key exchange.
 
-Bluetooth connecting security is established in general, by letting the two parties know the same key(the \emph{temporary key})and after that let them proof, that they indeed have the same key to verify them. As they cannot simply send the key to each other, as anybody could claim to have the correct key then, they compute a so called confirm value to share their knowledge about the secret without sharing the Temporary Key.
+Bluetooth connecting security is established in general, by letting the two 
+parties know the same key (the \emph{temporary key}) and after that let them 
+proof, that they indeed have the same key to verify them. As they cannot simply 
+send the key to each other, as anybody could claim to have the correct key 
+then, they compute a so called confirm value to share their knowledge about the 
+secret without sharing the temporary key.
 
 \begin{figure}
   \centering
@@ -501,7 +562,22 @@ Bluetooth connecting security is established in general, by letting the two part
   \label{fig:keyexchange}
 \end{figure}
 
-To do so the two parties(M which starts the connection and S who responds to the connection attempt) generate one random value each ($rand_M$ and $rand_S$). Using these random values, the Temporary Key and other \emph{known} values such as the intiating device address, based on the AES algorithm, they compute so called \emph{confirm} values. Which are shared as shown in figure~\ref{fig:keyexchange}: M sends S his confirm value $confirm_M$ and S sends M his confirm value $confirm_S$. Then, M sends S his random value $rand_M$. S now has everything to compute $confirm_M$ and can as such verify if M is in the possession of the correct Temporary Key. If the verification succeeds, S sends his random value $rand_S$ to M so M can verify, that S has the correct Temporary Key.
+To do so the two parties (M which starts the connection and S who responds to 
+the connection attempt) generate one random value each ($rand_M$ and $rand_S$). 
+Using these random values, the temporary key and other \emph{known} values such 
+as the intiating device address, based on the AES algorithm, they compute so 
+called \emph{confirm} values. Which are shared as shown in 
+figure~\ref{fig:keyexchange}: M sends S his confirm value $confirm_M$ and S 
+sends M his confirm value $confirm_S$. Then, M sends S his random value 
+$rand_M$. S now has everything to compute $confirm_M$ and can as such verify if 
+M is in the possession of the correct temporary key. If the verification 
+succeeds, S sends his random value $rand_S$ to M so M can verify, that S has 
+the correct temporary key.
+
+%KOMMENTAR:
+%Diesen Part verstehe ich nicht ganz - evtl. könntest du hier nochmal etwas 
+%genauer auf den Key Exchange eingehen. Wozu dieser Aufwand? Mir ist nicht ganz 
+%klar warum das sicher ist. 
 
 After this procedure is done, both parties know, they are in the possession of the same (correct) temporary key. They compute a series of different keys based on the Temporary Key to finally be able to compute session keys used for the AES encryption of the user data.
 
@@ -527,7 +603,21 @@ Although \emph{OOB} pairing mode is indeed safe, it is impractical to use and is
 To sniff bluetooth packets, a device is necessary which reads bitstreams on the given frequency band (which is one of the 2.4 GHz channels) by decoding the GFSK modulation. While this is a simple task it involves antennas, radio chips and microcontrollers. The ubertooth project~\cite{ubertooth} implements such a device enabling sniffing on the Bluetooth Low Energy physical layer adaptively (by updating the channel which should be sniffed accordingly). This bit stream may include information from many different connections and/or wireless technologies. To find a bluetooth packet in that bitstream, the \emph{preamble} (see section~\ref{ssec:link}) can be used as a pattern to look for. The upcoming 32-bit form the access address then and show if the packet is interesting or not (is it the connection, the attacker is interested in?). Now the next bits, the PDU and CRC data, are whitenend and as such must be XORed with the an LSFR seeded by the channel number which is sniffed to clear the whitening of the data. At this point the packet is successfully restored on the link layer.
 % Maybe add the fact that there are many rubbish packets?
 
-In pratice it is most convenient to sniff on the three advertisment channels: The connection establishment can be seen and all parameters necessary to follow and dercypt a connection can be recovered. As the hop-interval and hop-increment are none by the connection establishment, it is possible to change the sniffed channel according to that scheme to follow and decrypt the complete connection.
+%KOMMENTAR: Wofür steht GFSK? Eine ausgeschriebene Eräuterung wäre hier 
+%hilfreich.
+
+%(is it the connection, the attacker is interested in?) -> was ist das?
+%are whitenend and as such must be XORed with the an LSFR seeded by the channel 
+
+%number which is sniffed to clear the whitening of the data. -> zu viele 
+%unklare Abkürzungen
+
+In practice it is most convenient to sniff on the three advertisement channels: 
+The connection establishment can be seen and all parameters necessary to follow 
+and decrypt a connection can be recovered. As the hop-interval and 
+hop-increment are done by the connection establishment, it is possible to 
+change the sniffed channel according to that scheme to follow and decrypt the 
+complete connection.
 
 \subsection{Connection reset} \label{ssec:conreset}
 
@@ -542,7 +632,10 @@ To provoke a connection reset, packet injection has to be done. Looking at secti
   \item Send out on phy layer on the appropriate band using GFSK (e.g.\ use ubertooth)
 \end{enumerate}
 
-The BLE reference shows the structure of packets to provoke disconnection and connection reset on pages 564 and 64 (Section 4.6 DISCONNECTION REQUEST (CODE 0x06)) and show which PDU data has to be used to provoke the connection reset which will lead to a new connection establishment.\cite[p. 564]{ble40}
+The BLE reference shows the structure of packets to provoke disconnection and 
+connection reset on pages 564 and 64 (Section 4.6 DISCONNECTION REQUEST (CODE 
+0x06)) and show which PDU data has to be used to provoke the connection reset 
+which will lead to a new connection establishment. \cite[p. 564]{ble40}
 
 \subsection{Channel following}
 \label{channelfollowing}
@@ -568,11 +661,21 @@ As such we can look for an established connection (using preamble and access add
 \subsubsection{Hop increment}
 \label{ssub:hop_increment}
 
-Calculating the hop-increment involves a bit more math. To gather the necessary information, we listen first on channel 0, hop to channel 1 and wait to receive a package from the desired connection. Knowing the hop-interval already, we know how many hops the connection has performed before reaching channel 1. By knowing the number of hops that were performed we can generate a lookup-table by using Fermat’s little theorem or simple by brute-forcing all combinations to find a mapping from hop-count to \emph{hop increment}. Once these two values(hop interval and increment) are known, we can follow the connection in order to capture the full transmitted data.
+Calculating the hop-increment involves a bit more math. To gather the necessary 
+information, we listen first on channel 0, hop to channel 1 and wait to receive 
+a package from the desired connection. Knowing the hop-interval already, we 
+know how many hops the connection has performed before reaching channel 1. By 
+knowing the number of hops that were performed we can generate a lookup-table 
+by using Fermat’s little theorem or simple by brute-forcing all combinations to 
+find a mapping from hop-count to \emph{hop increment}. Once these two values 
+(hop interval and increment) are known, we can follow the connection in order 
+to capture the full transmitted data.
 
 \subsection{Key breaking}
 
-As described in section~\ref{sub:key_exchange} the two parties establishing a connection exchange (in plaintext) several values to ensure they have the same Temporary Key. The key in cracking the Temporary key is the confirm value.
+As described in section~\ref{sub:key_exchange} the two parties establishing a 
+connection exchange (in plaintext) several values to ensure they have the same 
+temporary key. The key in cracking the temporary key is the confirm value.
 
 \begin{equation*}
   \begin{split}
@@ -689,7 +792,13 @@ To prevent man-in-the middle attacks and passive eavesdropping as described in s
 
 
 \section{Conclusion}
-Bluetooth low energy in specification versions 4.0 and 4.1 is broken by design. Not only is it possible to track and eavesdrop ongoing connections, but also the key exchange protocol is broken in these versions resulting in millions of insecure connections nowadays. Tools to apply the known attacks are available in the internet. Future devices can be based on the new standard 4.2, which supports a secure key exchange protocol. Though many devices from nowadays won't get updates.
+Bluetooth low energy in specification versions 4.0 and 4.1 is broken by design. 
+Not only is it possible to track and eavesdrop ongoing connections, but also 
+the key exchange protocol is broken in these versions resulting in millions of 
+insecure connections nowadays. Tools to apply the known attacks are available 
+in the Internet. Future devices can be based on the new standard 4.2, which 
+supports a secure key exchange protocol. Though many devices from nowadays 
+will not get updates.
 
 
 % if have a single appendix:
@@ -710,7 +819,10 @@ Bluetooth low energy in specification versions 4.0 and 4.1 is broken by design. 
 \appendices
 \section{Proof of the prime number channel hop circle completeness}
 
-In section~\ref{channelfollowing} we refered to the fact that independently from the chosen hopincrement all channels will be used once after the same channel will be used a second time. We will proof this simple fact in this section.
+In section~\ref{channelfollowing} we refered to the fact that independently 
+from the chosen hop increment all channels will be used once after the same 
+channel will be used a second time. We will proof this simple fact in this 
+section.
 
 To proof this we assume the opposite: There is a hopincrement (which is no multiple of 37) which reaches its start channels again, before it hopped over all 37 channels:
 
