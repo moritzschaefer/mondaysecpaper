@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  16 NOV 2015 20:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.2)  17 NOV 2015 11:58
 entering extended mode
 **main.tex
 
@@ -218,46 +218,72 @@ Underfull \hbox (badness 1371) in paragraph at lines 425--427
 ity, se-cu-rity
  []
 
+<./img/uconnectCherokee1.jpg, id=1, 642.4pt x 481.8pt>
+File: ./img/uconnectCherokee1.jpg Graphic file (type jpg)
+
+<use ./img/uconnectCherokee1.jpg>
+Package pdftex.def Info: ./img/uconnectCherokee1.jpg used on input line 518.
+(pdftex.def)             Requested size: 252.94499pt x 189.70975pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 518--519
+ [][] 
+ []
+
 [1{C:/Users/Marovelo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 565.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 565.
+<./img/gartnerForecast.jpg, id=10, 691.58376pt x 555.07375pt>
+File: ./img/gartnerForecast.jpg Graphic file (type jpg)
 
-<./img/hpStudy1.png, id=9, 554.82281pt x 377.15906pt>
-File: ./img/hpStudy1.png Graphic file (type png)
- <use ./img/hpStudy1.png>
-Package pdftex.def Info: ./img/hpStudy1.png used on input line 612.
-(pdftex.def)             Requested size: 252.94499pt x 171.94717pt.
+<use ./img/gartnerForecast.jpg>
+Package pdftex.def Info: ./img/gartnerForecast.jpg used on input line 551.
+(pdftex.def)             Requested size: 252.94499pt x 203.011pt.
 
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 612--613
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 551--552
  [][] 
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 579.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 579.
 [2 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology 
-Security/project/report/mondaysecpaper/niklas/img/hpStudy1.png>]
-<./img/owaspTop10.png, id=16, 364.20276pt x 429.81631pt>
+Security/project/report/mondaysecpaper/niklas/img/uconnectCherokee1.jpg> <D:/Ei
+gene Dokumente/Uni/TU/Auslandssemester/Network Information Technology Security/
+project/report/mondaysecpaper/niklas/img/gartnerForecast.jpg>]
+<./img/hpStudy1.png, id=15, 554.82281pt x 377.15906pt>
+File: ./img/hpStudy1.png Graphic file (type png)
+
+<use ./img/hpStudy1.png>
+Package pdftex.def Info: ./img/hpStudy1.png used on input line 626.
+(pdftex.def)             Requested size: 252.94499pt x 171.94717pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 626--627
+ [][] 
+ []
+
+<./img/owaspTop10.png, id=17, 364.20276pt x 429.81631pt>
 File: ./img/owaspTop10.png Graphic file (type png)
 
 <use ./img/owaspTop10.png>
-Package pdftex.def Info: ./img/owaspTop10.png used on input line 642.
+Package pdftex.def Info: ./img/owaspTop10.png used on input line 656.
 (pdftex.def)             Requested size: 216.81pt x 255.87833pt.
 
-Underfull \hbox (badness 2591) in paragraph at lines 662--665
+Underfull \hbox (badness 2591) in paragraph at lines 676--679
 []\OT1/ptm/m/n/10 According to the top 10 list in-suf-fi-cient au-then-ti-ca-
  []
 
 [3 <D:/Eigene Dokumente/Uni/TU/Auslandssemester/Network Information Technology 
-Security/project/report/mondaysecpaper/niklas/img/owaspTop10.png>]
+Security/project/report/mondaysecpaper/niklas/img/hpStudy1.png> <D:/Eigene Doku
+mente/Uni/TU/Auslandssemester/Network Information Technology Security/project/r
+eport/mondaysecpaper/niklas/img/owaspTop10.png>] [4]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 938.
+(Font)              <8> on input line 952.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 938.
+(Font)              <6> on input line 952.
 
-Underfull \hbox (badness 10000) in paragraph at lines 942--946
+Underfull \hbox (badness 10000) in paragraph at lines 956--960
 $\OT1/ptm/m/n/8 Internet[]of[]Things[]Top[]Ten[]Project # tab = OWASP[]Internet
 []of[]Things[]$
  []
@@ -266,24 +292,24 @@ Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ” in font ptmri7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--968
+Underfull \hbox (badness 10000) in paragraph at lines 978--982
 []\OT1/ptm/m/n/8 arstechnica, \OT1/ptm/m/it/8 The fu-ture is the In-ter-net of 
 Things-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--968
+Underfull \hbox (badness 10000) in paragraph at lines 978--982
 \OT1/ptm/m/it/8 deal with it\OT1/ptm/m/n/8 ,  $http : / / arstechnica . com / u
 nite / 2015 / 10 /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--968
+Underfull \hbox (badness 10000) in paragraph at lines 978--982
 $\OT1/ptm/m/n/8 the-[]future-[]is-[]the-[]internet-[]of-[]things-[]deal-[]with-
 []it/$, last ac-cess: 2015-
  []
 
-** WARNING: \IEEEbiography is locked out when in conference mode (line 982).
+** WARNING: \IEEEbiography is locked out when in conference mode (line 996).
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -295,14 +321,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4]
+[5
+
+]
 ("D:\Eigene Dokumente\Uni\TU\Auslandssemester\Network Information Technology Se
 curity\project\report\mondaysecpaper\niklas\main.aux") ) 
 Here is how much of TeX's memory you used:
- 2228 strings out of 493921
- 36255 string characters out of 3148076
- 97511 words of memory out of 3000000
- 5536 multiletter control sequences out of 15000+200000
+ 2241 strings out of 493921
+ 36572 string characters out of 3148076
+ 96527 words of memory out of 3000000
+ 5546 multiletter control sequences out of 15000+200000
  35966 words of font info for 69 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  27i,7n,19p,232b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -312,9 +340,9 @@ ic/amsfonts/cm/cmsy7.pfb><D:/Programme/Latex/Miktex/fonts/type1/urw/times/utmb8
 a.pfb><D:/Programme/Latex/Miktex/fonts/type1/urw/times/utmbi8a.pfb><D:/Programm
 e/Latex/Miktex/fonts/type1/urw/times/utmr8a.pfb><D:/Programme/Latex/Miktex/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 287969 bytes).
+Output written on main.pdf (5 pages, 399339 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
